@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethiopian textbbook and teacher guide PDFs</title>
+    <link href="html.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+
+        }
+        .title{
+            color:white;
+            font-size: 30px;
+        }
+        header{
+            background-color: black;
+        }
+        li{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            
+        }
+        nav {
+            min-width: 100%;
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            background-color: black;
+        }
+       .barlinks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0%;
+        padding-top: 40px;
+        width: 30%;
+       }
+       .hum div{
+        background-color:white;
+        margin: 5px;
+        height: 2px;
+        width: 10px;
+        transition: all 0.3s ease-in;
+       }
+       .hum div{
+        display: none;
+       }
+       @media screen and (max-width:1024px){
+        .barlinks {   
+            width: 60%;       
+        }
+    
+        
+       }
+       @media (max-width:768px){
+        body{
+            overflow-x: hidden;
+        }
+        .barlinks{
+            position: absolute;
+            right: -10px;
+            top: 70px;
+            height: 50vh;
+            width: 200px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: -1000px;
+            transition: transform .5s ease-in;
+        }
+        .hum div{
+            display: block;
+            cursor: pointer;
+        }
+       
+         
+        .title{
+            color:white;
+            font-size: 30px;
+       }
+       .barlinks li{
+            opacity: 0;
+        }
+        .form{
+            width: 300px;
+        }
+       }
+       .barlinks.nuga {
+            top: 0px;
+        }
+       
+        @keyframes barli{
+            from{
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+        .toggle .line1{
+            transform: rotate(45deg) translate(5px, 10px);
+        }
+        .toggle .line2{
+            opacity: 0;
+        }
+        .toggle .line3{
+            transform: rotate(-45deg) translate(5px, -10px);
+        }
+
+        section{
+           
+            padding-top: 50px;
+        }
+        .h2{
+            font-family: 'Times New Roman', Times, serif;
+            text-align:left;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color:black;
+            border: 2px solid;
+            padding: 1px;
+            box-shadow: 4px 10x 3px red;
+            border-radius: 50px;
+        }
+        .box{
+            display: flex;
+            margin: 5px;
+            padding-left: 30px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .imgs{
+            padding: 30px;
+            padding-block: 30px;
+            margin-bottom: 30px;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 20px 20px 34px rgb(0, 0, 200, 0.2) ;
+
+        }
+        .link{
+            color: black;
+            text-decoration: none;
+        }
+        .imgs:hover{
+            box-shadow: 20px 20px 34px rgb(0, 0, 200, 0.6) ;
+        }
+        .buttom{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        footer{
+            padding: 80px;
+            background-color: antiquewhite;
+            
+        }
+        .left{
+            text-align: right;
+            font-size: 20px;
+        }
+        .priv{
+            display: inline-block;
+            padding: 20px;
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .priv:hover{
+            text-decoration: dashed;
+            
+        }
+        .form{
+            background-color:aqua;
+            width: 100%;
+            padding-left: 220px;
+            padding-right: 210px;
+            height: 700px;
+            padding-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        form{
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+            min-height: 500px;
+            min-width: 400px;
+            background-color: white;
+            border-radius: 20px;
+        }
+        form input, textarea{
+            padding: 20px;
+            margin: 10px;
+            border: 0;
+            outline: 0;
+            background-color:blanchedalmond;
+            font-size: 20px;
+        }
+        form button{
+            background-color: brown;
+            padding: 20px;
+            margin: 15px;
+            margin-left: 90px;
+            border: 0;
+            outline: 0;
+            width: 150px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color ease-in 0.3s ;
+        }
+        button:hover{
+            background-color: aqua;
+        }
+        #status{
+            margin-left: 138px;
+            font-size: 20px;
+            width: 200px;
+            border-radius: 5px;
+            color: white;
+        }
+        #status.success{
+            background-color:blueviolet;
+            transition: status 4s ease forwards;
+        }
+        #status.error{
+            background-color: red;
+            color: black;
+            transition: status 4s ease forwards;
+        }
+        @keyframes status{
+            0%{
+                opacity: 1;
+                pointer-events: all;
+            }
+            90%{
+                opacity: 1;
+                pointer-events: all;
+            }
+            100%{
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        .contact{
+            padding-bottom: 50px;
+        }
+        @media (max-width:768px){
+            form{
+                min-width: 320px;
+                margin-right: 90px;
+            }
+     
+          
+            h1{
+                width: 270px;
+            }
+           
+            input, textarea{
+                width: 250px;
+                height: 70px;
+            }
+            .box{
+                margin-left: -20px;
+            }
+            form button{
+                margin-left: 65px;
+            }
+        }
+    
+
+
+
+    </style>
+    
+    
+    <nav>
+        <div class="title">Negu</div>
+            <ul class="barlinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        <div class="hum">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+        </div>
+    </nav>
+    <section>
+        <h1>My Official Website</h1>
+        <h2 class="h2">Welcome!</h2>
+        <h2 class="h2">Ethiopian textbooks and teacher guides</h2>
+        <div class="box">
+            <a class="link" href="h1.html"><div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p>Grade 9 textbook</p>
+                    <p>pdf</p>
+                </div>
+            </div></a>
+            <a class="link" href="h2.html"><div class="imgs">
+                <img src="imgs/g10.jpg"/>
+                <div class="buttom">
+                    <p>Grade 10 textbook</p>
+                    <p>pdf</p>
+                </div>
+            </div></a>
+            <a class="link" href="h3.html"><div class="imgs">
+                <img src="imgs/Grade-11.jpg"/>
+                <div class="buttom">
+                    <p>Grade 11 textbook</p>
+                    <p>pdf</p>
+                </div>
+            </div></a>
+            <a class="link" href="h4.html"><div class="imgs">
+                <img src="imgs/Grade-12.jpg"/>
+                <div class="buttom">
+                    <p>Grade 12 textbook</p>
+                    <p>pdf</p>
+                </div>
+            </div></a>
+            <a class="link" href="h5.html"><div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p>Grade 9 teacher guides</p>
+                    <p>pdf</p>
+                </div>
+            </div></a>
+            <a class="link" href="h6.html"><div class="imgs">
+                <img src="imgs/g10.jpg"/>
+                <div class="buttom">
+                    <p>Grade 10 teacher guides</p>
+                    <p>pdf</p>
+                </div>
+            </div></a>
+            <a class="link" href="h7.html"><div class="imgs">
+                <img src="imgs/Grade-11.jpg"/>
+                <div class="buttom">
+                    <p>Grade 11 teacher guides</p>
+                    <p>pdf</p>
+                </div>
+            </div></a>
+            <a class="link" href="h8.html"><div class="imgs">
+                <img src="imgs/Grade-12.jpg"/>
+                <div class="buttom">
+                    <p>Grade 12 teacher guides</p>
+                    <p>pdf</p>
+                </div>
+            </div></a>
+            
+        </div>
+    </section>
+    <section class="contact">
+        <div class="form">
+            <form action="https://formspree.io/f/xnqrzblq" method="post" id="my-form">  
+                <H1>Get in Touch</H1>
+                <input type="text" id="name" name="username" required placeholder="Username">
+                <input type="email" id="Email" name="email" required placeholder="Email">
+                <input type="text" id="Phone number" name="phone number" required placeholder="Phone number">
+                <textarea name="Comment" id="Comment" rows="4" placeholder="Message"></textarea>
+                <button type="submit">submit</button>
+                <div id="status" class="error"></div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="foot">
+             <p class="left">&copy2022 copyright reserved by WWW.NEGAHOPE.COM</p>
+             <div >
+                <a  class="priv" href="about.html"><p>About</p></a> 
+                <a class="priv" href=""><p>|</p></a>
+                <a class="priv" href="home.html"><p>Home</p></a> 
+                <a class="priv" href="https://www.facebook.com/negalign.mokonin"><img src="imgs/facebook.png" alt=""></a>
+                <a href="https://github.com/negelignmokonen"><img src="imgs/github.png" alt=""></a>
+                
+             </div>
+        </div>
+    </footer>
+    <script>
+        const zebu = () =>{
+        const barlinks = document.querySelector(".barlinks")
+        const hum = document.querySelector(".hum")
+        const linkn = document.querySelectorAll(".barlinks li")
+        hum.addEventListener("click",() => {
+            barlinks.classList.toggle("nuga")
+            linkn.forEach((link, index) => {
+            if(link.style.animation){
+                link.style.animation = ""
+            }
+            else{
+                link.style.animation = `barli 0.5s ease forwards ${index / 7 + 0.4}s`
+            }
+            
+        })
+            hum.classList.toggle("toggle")
+        })
+
+    }
+    zebu()
+
+    var form = document.getElementById("my-form");
+            
+            async function handleSubmit(event) {
+              event.preventDefault();
+              var status = document.getElementById("status");
+              var data = new FormData(event.target);
+              fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+              }).then(response => {
+                if (response.ok) {
+                  status.innerHTML = "Thanks for your submission!";
+                  form.reset()
+                } else {
+                  response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                    } else {
+                      status.innerHTML = "Oops! There was a problem submitting your form"
+                    }
+                  })
+                }
+              }).catch(error => {
+                status.classList.add("error")
+                status.innerHTML = "Oops! There was a problem submitting your form"
+              });
+            }
+            form.addEventListener("submit", handleSubmit)
+    </script>     
+</body>
+</html>

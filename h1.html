@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 9 textbook</title>
+
+</head>
+<body>
+    <style>
+    *{
+        margin-top: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .title{
+        color:white;
+        font-size: 30px;
+    }
+    header{
+        background-color: black;
+    }
+    li{
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        
+    }
+    nav {
+        position: relative;
+        min-width: 100%;
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        background-color: black;
+    }
+   .barlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0%;
+    padding-top: 40px;
+    width: 30%;
+   }
+   .hum div{
+    background-color:white;
+    margin: 5px;
+    height: 2px;
+    width: 10px;
+    transition: all 0.3s ease-in;
+   }
+   .hum div{
+    display: none;
+   }
+   @media screen and (max-width:1024px){
+    .barlinks {   
+        width: 60%;
+        font-size: 30px;       
+    }
+
+    
+   }
+   @media (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .barlinks{
+        position: absolute;
+        right: -10px;
+        top: 70px;
+        height: 50vh;
+        width: 200px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: -1000px;
+        transition: transform .5s ease-in;
+    }
+    .hum div{
+        display: block;
+        cursor: pointer;
+    }
+   
+     
+    .title{
+        color:white;
+        font-size: 30px;
+   }
+   .barlinks li{
+        opacity: 0;
+    }
+   }
+   .barlinks.nuga {
+        top: 0px;
+    }
+   
+    @keyframes barli{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    }
+    .toggle .line1{
+        transform: rotate(45deg) translate(5px, 10px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(-45deg) translate(5px, -10px);
+    }
+
+    
+   .imgs{
+    padding: 50px;
+    padding-bottom: 30px;
+    border: 1px solid black;
+    box-shadow: 20px 20px 34px rgba(0, 0, 200, 0.2);
+    margin-top: 30px;
+   }
+   .imgs:hover{
+    box-shadow: 20px 20px 34px rgba(0, 0, 200, 0.5);
+   }
+   .container{
+        margin-top: 50px;
+        padding: 30px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+   } 
+   .link {
+    text-decoration: none;
+    color: black;
+   }
+   h1{
+    text-align: center;
+    padding: 30px;
+   }
+   footer{
+            padding: 80px;
+            background-color: antiquewhite;
+        }
+        .left{
+            text-align: right;
+            font-size: 20px;
+        }
+        .priv{
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .priv:hover{
+            text-decoration: dashed;
+            
+        }
+  
+
+    </style>
+    <nav>
+        <div class="title">Negu</div>
+            <ul class="barlinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        <div class="hum">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+        </div>
+    </nav>
+
+        <section>
+        <h1>Grade-9 Text Book</h1>
+        <div class="container">
+            
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p>Grade 9 English text book</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/English - Students Text Book - Grade 9.pdf"  download="Grade 9 English text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+          
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p>Grade 9 Biology textbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/Biology Grade 9.pdf"  download="Grade 9 Biology text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+                    
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p> Grade 9 civics textbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/CivEthicalEdu Grade 9.pdf"  download="Grade 9 civics text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+                    
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p> Grade 9 ICT textbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/Grade-9-Information-Communication-Tecgnology-Textbook.pdf"  download="Grade 9 ICT text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p> Grade 9 chemstry textbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/Chemistry Grade 9.pdf"  download="Grade 9 chemistry text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p> Grade 9 physics textbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/Physics Grade 9.pdf"  download="Grade 9 physics text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p> Grade 9 maths textbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/maths.pdf"  download="Grade 9 maths text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p> Grade 9 amharic textbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/Amharic Language Student Textb - user_290.pdf"  download="Grade 9 amharic text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p> Grade 9 Geographytextbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/Geography - Student Textbook - Grade 9.pdf"  download="Grade 9 geography text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+            <div class="imgs">
+                <img src="imgs/g9.jpg"/>
+                <div class="buttom">
+                    <p> Grade 9 history textbook</p>
+                    <p>pdf</p>
+                    <a class="download" href="pdf/g9/History .pdf"  download="Grade 9 history text book"><button>DOWNLOAD</button></a>
+                </div>
+            </div>
+  
+        </div>
+           
+   
+    </section>
+    <footer>
+        <div class="foot">
+             <p class="left">&copy2022 copyright reserved by WWWW.NEGAHOPE.COM</p>
+             <div >
+                <a  class="priv" href="about.html"><p>About</p></a> 
+                <a class="priv" href=""><p>|</p></a>
+                <a class="priv" href="home.html"><p>Home</p></a> 
+                <a class="priv" href="https://www.facebook.com/negalign.mokonin"><img src="imgs/facebook.png" alt=""></a>
+                <a href="https://github.com/negelignmokonen"><img src="imgs/github.png" alt=""></a>
+             </div>
+        </div>
+    </footer>
+    <script>
+        const zebu = () =>{
+        const barlinks = document.querySelector(".barlinks")
+        const hum = document.querySelector(".hum")
+        const linkn = document.querySelectorAll(".barlinks li")
+        hum.addEventListener("click",() => {
+            barlinks.classList.toggle("nuga")
+            linkn.forEach((link, index) => {
+            if(link.style.animation){
+                link.style.animation = ""
+            }
+            else{
+                link.style.animation = `barli 0.5s ease forwards ${index / 7 + 0.4}s`
+            }
+            
+        })
+            hum.classList.toggle("toggle")
+        })
+
+    }
+    zebu()
+    </script>     
+
+
+    
+</body>
+</html>
